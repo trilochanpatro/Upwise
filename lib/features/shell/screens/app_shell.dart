@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../core/network/upwise_api_client.dart';
-import '../../../app/theme/app_colors.dart';
+import '../../../core/widgets/upwise_logo.dart';
 import '../../home/screens/home_screen.dart';
 import '../../goals/screens/goals_screen.dart';
 import '../../ai_coach/screens/coach_screen.dart';
@@ -295,15 +295,7 @@ class _AppShellState extends State<AppShell> {
       appBar: AppBar(
         title: Row(
           children: [
-            Container(
-              padding: const EdgeInsets.all(5),
-              decoration: BoxDecoration(
-                color: AppColors.primaryLight,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: const Icon(Icons.auto_awesome,
-                  color: AppColors.primary, size: 20),
-            ),
+            const UpwiseLogo(size: 32, borderRadius: 9),
             const SizedBox(width: 10),
             Text(
               'Upwise',

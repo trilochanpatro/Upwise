@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../app/theme/app_colors.dart';
 import '../../../core/widgets/upwise_card.dart';
+import '../../../core/widgets/upwise_logo.dart';
 import '../../../core/widgets/progress_bar.dart';
 import '../models/onboarding_model.dart';
 
@@ -163,18 +164,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
-        title: Row(
+        title: const Row(
           children: [
-            Container(
-              padding: const EdgeInsets.all(6),
-              decoration: BoxDecoration(
-                color: AppColors.primaryLight,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: const Icon(Icons.auto_awesome, color: AppColors.primary, size: 20),
-            ),
-            const SizedBox(width: 10),
-            const Text('Welcome to Upwise', style: TextStyle(fontWeight: FontWeight.w800)),
+            UpwiseLogo(size: 32, borderRadius: 9),
+            SizedBox(width: 10),
+            Text('Welcome to Upwise', style: TextStyle(fontWeight: FontWeight.w800)),
           ],
         ),
         actions: [

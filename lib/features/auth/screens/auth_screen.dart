@@ -3,6 +3,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../../../app/theme/app_colors.dart';
 import '../../../core/widgets/upwise_card.dart';
+import '../../../core/widgets/upwise_logo.dart';
 
 class AuthScreen extends StatefulWidget {
   const AuthScreen({
@@ -90,10 +91,8 @@ class _AuthScreenState extends State<AuthScreen> {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      const Icon(
-                        Icons.auto_awesome,
-                        color: AppColors.primary,
-                        size: 40,
+                      const Center(
+                        child: UpwiseLogo(size: 68, borderRadius: 18),
                       ),
                       const SizedBox(height: 16),
                       Text(
