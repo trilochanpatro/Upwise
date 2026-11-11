@@ -27,7 +27,7 @@ class UpwiseApiClient {
         _baseUrl = (baseUrl ??
                 const String.fromEnvironment(
                   'UPWISE_API_URL',
-                  defaultValue: 'http://10.0.2.2:8000',
+                  defaultValue: 'https://upwise-api-production.up.railway.app',
                 ))
             .replaceFirst(RegExp(r'/+$'), '');
 
